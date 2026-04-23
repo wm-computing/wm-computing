@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WM COMPUTING // SECURE INFRASTRUCTURE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Syncopate:wght@400;700&family=Inter:wght@400;600;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=21" />
+  <link rel="stylesheet" href="css/animations.css?v=21" />
+  <style>
+    /* MODAL BLUR FIX FOR SAFARI */
+    #modal-overlay {
+      -webkit-backdrop-filter: blur(12px);
+    }
+  </style>
+
+  <link rel="stylesheet" href="css/extra-sections.css?v=21" />
+</head>
+
+<body class="loading">
+
+  <!-- BOOT SEQUENCE OVERLAY -->
+  <div id="boot-screen" class="boot-screen">
+    <div class="boot-text" id="boot-text"></div>
+  </div>
+
+  <!-- NOISE OVERLAY FOR TEXTURE -->
+  <div class="noise-overlay"></div>
+
+  <!-- NAVIGATION -->
+  <nav class="sys-nav">
+    <div class="nav-container">
+      <a href="index.html" class="sys-brand">
+        <img src="img/logo.png" alt="WM Computing Logo" class="brand-logo" />
+        <span class="brand-text decipher" data-text="WM_COMPUTING">WM_COMPUTING</span>
+      </a>
+      <div class="sys-links">
+        <a href="#core" class="nav-link">[ 01. INÍCIO ]</a>
+        <a href="#datagrid" class="nav-link">[ 02. SOLUÇÕES ]</a>
+        <a href="#clearance" class="nav-link">[ 03. PLANOS ]</a>
+        <a href="contato.html" class="nav-link highlight">[ CONTATO ]</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO / CORE SYSTEM -->
+  <main id="core" class="core-section">
+    <canvas id="hero-canvas"></canvas>
+    <div class="core-content" style="text-align: center;">
+      <div class="sys-badge decipher" data-text="> STATUS: OPERAÇÃO_NOMINAL_24/7">> STATUS: OPERAÇÃO_NOMINAL_24/7
+      </div>
+      <h1 class="massive-title">
+        <span class="decipher" data-text="INFRAESTRUTURA">INFRAESTRUTURA</span><br>
+        <span class="accent decipher" data-text="SEM PONTOS CEGOS.">SEM PONTOS CEGOS.</span>
+      </h1>
+      <p class="core-sub decipher"
+        data-text="Sua empresa não pode parar. Blindamos sua operação com monitoramento preditivo e cibersegurança de elite. Estabilidade total, 24 horas por dia."
+        style="margin-left: auto; margin-right: auto; color: #cbd5e1;">
+        Sua empresa não pode parar. Blindamos sua operação com monitoramento preditivo e cibersegurança de elite.
+        Estabilidade total, 24 horas por dia.
+      </p>
+      <div class="core-actions" style="justify-content: center;">
+        <a href="#datagrid" class="btn-brutal">
+          <span class="btn-bracket">[</span>
+          <span class="btn-text">EXPLORAR_REDE</span>
+          <span class="btn-bracket">]</span>
+        </a>
+        <a href="contato.html" class="btn-brutal primary">
+          <span class="btn-bracket">[</span>
+          <span class="btn-text decipher" data-text="INICIAR_CONSULTORIA">INICIAR_CONSULTORIA</span>
+          <span class="btn-bracket">]</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="side-hud left-hud">
+      <div class="hud-line">LATÊNCIA: 0.02ms</div>
+      <div class="hud-line">PERDA DE PACOTE: 0%</div>
+    </div>
+    <div class="side-hud right-hud">
+      <div class="hud-line">ATIVIDADE: 99.99%</div>
+      <div class="hud-line">NÓ_ATIVO: A1-SEC</div>
+    </div>
+  </main>
+
+  <!-- STATS TAPE (Marquee) -->
+  <div class="stats-tape">
+    <div class="tape-track" id="tape-track">
+      <!-- Injected via JS -->
+    </div>
+  </div>
+
+  <!-- ABOUT (Quem Somos) -->
+  <section id="about" class="about-section" style="padding-bottom: 40px;">
+    <div class="container">
+      <div class="about-terminal-box">
+        <div class="section-header" style="margin-bottom: 32px;">
+          <div class="header-line"></div>
+        </div>
+        <div class="about-content" style="padding: 10px 0; text-align: center;">
+          <p class="term-line" style="margin-bottom: 24px; color: #cbd5e1;">> A WM Computing é a inteligência por trás
+            das infraestruturas digitais mais resilientes. Desde 2021, transformamos a tecnologia de custo em vantagem
+            estratégica.</p>
+          <p class="term-line" style="margin-bottom: 24px; color: #cbd5e1;">> Com operação em 5 estados, entregamos
+            continuidade absoluta onde outros entregam apenas suporte. Seus dados são protegidos por camadas de defesa
+            de elite.</p>
+          <p class="term-line" style="margin-bottom: 24px; color: #cbd5e1;">> Nossa metodologia antecipa o caos.
+            Identificamos e neutralizamos ameaças antes que elas se tornem incidentes reais.</p>
+          <p class="term-line" style="margin-bottom: 40px; color: #cbd5e1;">> Você assume a liderança do seu mercado.
+            Nós garantimos a base com resposta imediata e controle total da rede.</p>
+          <div class="about-highlight term-line"
+            style="border-left-color: var(--color-neon-green); background: rgba(0, 255, 65, 0.03); justify-content: center;">
+            <span class="warning-tag" style="color: var(--color-neon-green);">[!]</span>
+            <div class="highlight-text">
+              <strong style="color: var(--color-neon-green);">Foco em Continuidade, não em Chamados.</strong><br>
+              <span style="color: #fff;">Projetamos sistemas resilientes que eliminam a necessidade de "apagar
+                incêndios".</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🟥 SEÇÃO 1 — PROBLEMA (DOR DO CLIENTE) -->
+  <section id="problem" class="problem-section" style="text-align: center;">
+    <div class="container">
+      <div class="section-header reveal">
+        <h3 class="massive-title reveal-up"
+          style="font-size: 3.5rem; margin-top: 20px; margin-bottom: 20px; line-height: 1.1;">
+          Sua TI é o <span class="accent">coração</span> do negócio.<br>
+          Mas ela está sob seu <span class="accent">controle?</span>
+        </h3>
+        <p class="reveal-up delay-100"
+          style="max-width: 800px; margin: 0 auto 20px; font-size: 1.25rem; line-height: 1.6; color: #94a3b8;">
+          Vulnerabilidades <span style="color: #fff;">não avisam</span> quando vão atacar.
+        </p>
+        <p class="reveal-up delay-200"
+          style="max-width: 800px; margin: 0 auto 20px; font-size: 1.25rem; line-height: 1.6; color: #94a3b8;">
+          Começa com sinais.
+        </p>
+        <p class="reveal-up delay-300"
+          style="max-width: 800px; margin: 0 auto 20px; font-size: 1.25rem; line-height: 1.4; color: var(--color-text-main); font-weight: 700;">
+          <span style="color: var(--color-neon-blue);">Discretos.</span><br>
+          <span style="color: var(--color-neon-blue);">Silenciosos.</span><br>
+          Ignorados no dia a dia.
+        </p>
+        <p class="reveal-up delay-400"
+          style="max-width: 800px; margin: 0 auto 20px; font-size: 1.25rem; line-height: 1.6; color: #94a3b8;">
+          Um sistema mais lento. Um acesso que falha. Um processo que trava sem explicação.
+        </p>
+        <p class="reveal-up delay-500"
+          style="max-width: 800px; margin: 0 auto 20px; font-size: 1.25rem; line-height: 1.6; color: #94a3b8;">
+          Com o tempo, esses sinais deixam de ser detalhes.
+        </p>
+        <p class="reveal-up delay-600"
+          style="max-width: 800px; margin: 0 auto 60px; font-size: 1.5rem; line-height: 1.6; color: var(--color-neon-orange); font-weight: 800; letter-spacing: 1px;">
+          E PASSAM A SER RISCO IMINENTE.
+        </p>
+        <div class="header-line"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🟧 SEÇÃO 2 — CONSEQUÊNCIA (IMPACTO) -->
+  <section id="consequence" class="consequence-section" style="text-align: center;">
+    <div class="container">
+      <div class="consequence-header reveal">
+        <h3 class="massive-title reveal-up"
+          style="font-size: 3.5rem; margin-top: 20px; margin-bottom: 20px; line-height: 1.1;">TI parada não é custo
+          técnico.<br>É <span
+            style="color: #fff; text-decoration: underline; text-underline-offset: 8px; text-decoration-color: var(--color-neon-orange);">lucro</span>
+          que escorre pelo ralo.<br><span style="color: var(--color-neon-orange);">O PREJUÍZO É REAL.</span></h3>
+        <p class="reveal-up delay-100"
+          style="max-width: 800px; margin: 0 auto 20px; font-size: 1.25rem; line-height: 1.6; color: #94a3b8;">
+          A infraestrutura não falha sozinha.
+        </p>
+        <p class="reveal-up delay-200"
+          style="max-width: 800px; margin: 0 auto 20px; font-size: 1.25rem; line-height: 1.6; color: var(--color-text-main); font-weight: 700;">
+          Ela <span class="accent">paralisa</span> toda a sua operação.
+        </p>
+        <p class="reveal-up delay-300"
+          style="max-width: 800px; margin: 0 auto 20px; font-size: 1.25rem; line-height: 1.4; color: #cbd5e1;">
+          Atendimento interrompido. Processos travados. Equipes ociosas.
+        </p>
+        <p class="reveal-up delay-400"
+          style="max-width: 800px; margin: 0 auto 20px; font-size: 1.25rem; line-height: 1.6; color: #94a3b8;">
+          O prejuízo acumulativo corrói sua <span style="color: #fff;">autoridade</span> e sua <span
+            style="color: #fff;">receita</span>.
+        </p>
+        <p class="reveal-up delay-600"
+          style="max-width: 800px; margin: 0 auto; font-size: 1.35rem; line-height: 1.6; color: var(--color-neon-orange); font-weight: 800; border: 1px solid rgba(255,69,0,0.3); padding: 20px; display: inline-block;">
+          RESULTADO: PERDA DE MERCADO.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🟩 SEÇÃO 3 — SOLUÇÃO (POSICIONAMENTO) -->
+  <section id="solution" class="solution-section" style="text-align: center;">
+    <div class="container">
+      <div class="solution-container" style="display: flex; flex-direction: column; align-items: center;">
+        <div class="solution-text reveal">
+          <h3 class="massive-title reveal-up"
+            style="font-size: 3.5rem; margin-top: 20px; margin-bottom: 20px; line-height: 1.1;"><span
+              class="accent">Líderes</span> de mercado <br>não aceitam instabilidade.</h3>
+          <p class="reveal-up delay-100"
+            style="font-size: 1.25rem; line-height: 1.6; margin: 0 auto 20px; color: #94a3b8; max-width: 800px;">
+            O diferencial não está em quem resolve rápido.
+          </p>
+          <p class="reveal-up delay-200"
+            style="font-size: 1.25rem; line-height: 1.6; margin: 0 auto 20px; color: var(--color-text-main); font-weight: 700; max-width: 800px;">
+            Está em quem <span class="accent">neutraliza</span> o problema antes que ele exista.
+          </p>
+          <p class="reveal-up delay-300"
+            style="font-size: 1.25rem; line-height: 1.6; margin: 0 auto 20px; color: #cbd5e1; max-width: 800px;">
+            A WM Computing entrega <span style="color: #fff;">gestão preditiva</span> absoluta.
+          </p>
+          <p class="reveal-up delay-400"
+            style="font-size: 1.25rem; line-height: 1.4; margin: 0 auto 20px; color: #94a3b8; max-width: 800px;">
+            Monitoramento inteligente. Resiliência sistêmica. Blindagem de dados.
+          </p>
+          <p class="reveal-up delay-600"
+            style="font-size: 1.25rem; line-height: 1.4; margin: 0 auto 20px; color: var(--color-neon-green); font-weight: 700;">
+            ESTÁVEL. SEGURO. PREVISÍVEL.
+          </p>
+          <p class="reveal-up delay-800"
+            style="font-size: 1.25rem; line-height: 1.6; margin-bottom: 0; color: var(--color-text-main); font-weight: 800;">
+            A BASE PARA O SEU PRÓXIMO NÍVEL.
+          </p>
+          <a href="contato.html" class="btn-brutal primary reveal-up delay-300"
+            style="margin-top: 48px; justify-content: center;">
+            <span class="btn-bracket">[</span>
+            <span class="btn-text">ASSUMIR_O_CONTROLE</span>
+            <span class="btn-bracket">]</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-header reveal" style="text-align: center;">
+    <h3 class="massive-title reveal-up"
+      style="font-size: 3.5rem; margin-top: 20px; margin-bottom: 20px; line-height: 1.1;">Não entregamos
+      suporte.<br><span class="accent">Entregamos continuidade.</span></h3>
+    <p class="reveal-up delay-100"
+      style="max-width: 800px; margin: 0 auto 20px; font-size: 1.25rem; line-height: 1.6; color: var(--color-text-dim);">
+      O modelo tradicional é <span style="color: var(--color-neon-orange);">reativo</span>. Espera o caos para agir.
+    </p>
+    <p class="reveal-up delay-200"
+      style="max-width: 800px; margin: 0 auto 20px; font-size: 1.25rem; line-height: 1.6; color: var(--color-text-dim);">
+      A WM Computing opera com <span class="accent">antecipação</span> absoluta.
+    </p>
+    <p class="reveal-up delay-300"
+      style="max-width: 800px; margin: 0 auto 20px; font-size: 1.25rem; line-height: 1.6; color: var(--color-text-main); font-weight: 800;">
+      CONTROLE. ESTABILIDADE. ESCALABILIDADE.
+    </p>
+    <div class="header-line" style="margin-top: 40px;"></div>
+  </div>
+  </div>
+  </section>
+
+  <!-- SOLUÇÕES (Datagrid) -->
+  <section id="datagrid" class="datagrid-section">
+    <div class="container">
+      <div class="section-header reveal" style="text-align: center; margin-bottom: 60px;">
+        <h2 class="massive-title reveal-up" style="font-size: 2.5rem; letter-spacing: 4px; color: var(--color-neon-green);">SOLUÇÕES</h2>
+        <div class="header-line"></div>
+      </div>
+
+      <div class="hud-modules-grid">
+
+        <!-- MODULE 1 -->
+        <div class="hud-module">
+          <div class="module-header">
+            <span class="module-id">MOD_01</span>
+            <span class="module-icon">🧠</span>
+          </div>
+          <h3 class="module-title">Gestão de TI</h3>
+          <p class="module-desc">Gerenciamento completo da infraestrutura tecnológica da empresa, com foco em organização, desempenho e continuidade operacional.</p>
+          <div class="module-footer">
+            <div class="module-status"><span class="status-dot"></span> ATIVO</div>
+          </div>
+        </div>
+
+        <!-- MODULE 2 -->
+        <div class="hud-module">
+          <div class="module-header">
+            <span class="module-id">MOD_02</span>
+            <span class="module-icon">⚙️</span>
+          </div>
+          <h3 class="module-title">Suporte Técnico</h3>
+          <p class="module-desc">Atendimento técnico remoto e presencial focado na rápida resolução de incidentes e no suporte contínuo aos usuários.</p>
+          <div class="module-footer">
+            <div class="module-status"><span class="status-dot"></span> ATIVO</div>
+          </div>
+        </div>
+
+        <!-- MODULE 3 -->
+        <div class="hud-module">
+          <div class="module-header">
+            <span class="module-id">MOD_03</span>
+            <span class="module-icon">☁️</span>
+          </div>
+          <h3 class="module-title">Backup em Nuvem</h3>
+          <p class="module-desc">Soluções de backup automatizado com armazenamento seguro, protegendo informações críticas contra perdas ou ataques.</p>
+          <div class="module-footer">
+            <div class="module-status"><span class="status-dot"></span> ATIVO</div>
+          </div>
+        </div>
+
+        <!-- MODULE 4 -->
+        <div class="hud-module">
+          <div class="module-header">
+            <span class="module-id">MOD_04</span>
+            <span class="module-icon">🛡️</span>
+          </div>
+          <h3 class="module-title">Cibersegurança</h3>
+          <p class="module-desc">Implementação de soluções avançadas como antivírus corporativo e EDR para proteção contra ameaças sofisticadas.</p>
+          <div class="module-footer">
+            <div class="module-status" style="color:var(--color-neon-orange);"><span class="status-dot" style="background:var(--color-neon-orange);"></span> MONITORANDO</div>
+          </div>
+        </div>
+
+        <!-- MODULE 5 -->
+        <div class="hud-module">
+          <div class="module-header">
+            <span class="module-id">MOD_05</span>
+            <span class="module-icon">🔥</span>
+          </div>
+          <h3 class="module-title">Firewall & Redes</h3>
+          <p class="module-desc">Gerenciamento de tráfego rigoroso e bloqueio de acessos indevidos para garantir a integridade das informações.</p>
+          <div class="module-footer">
+            <div class="module-status"><span class="status-dot"></span> ATIVO</div>
+          </div>
+        </div>
+
+        <!-- MODULE 6 -->
+        <div class="hud-module">
+          <div class="module-header">
+            <span class="module-id">MOD_06</span>
+            <span class="module-icon">⚡</span>
+          </div>
+          <h3 class="module-title">Servidores</h3>
+          <p class="module-desc">Implantação e manutenção de servidores físicos e virtuais, garantindo alta disponibilidade para aplicações críticas.</p>
+          <div class="module-footer">
+            <div class="module-status"><span class="status-dot"></span> ATIVO</div>
+          </div>
+        </div>
+
+        <!-- MODULE 7 -->
+        <div class="hud-module">
+          <div class="module-header">
+            <span class="module-id">MOD_07</span>
+            <span class="module-icon">🌐</span>
+          </div>
+          <h3 class="module-title">Infraestrutura</h3>
+          <p class="module-desc">Planejamento e implementação de redes estruturadas, incluindo cabeamento e switches para suporte operacional.</p>
+          <div class="module-footer">
+            <div class="module-status"><span class="status-dot"></span> ATIVO</div>
+          </div>
+        </div>
+
+        <!-- MODULE 8 -->
+        <div class="hud-module">
+          <div class="module-header">
+            <span class="module-id">MOD_08</span>
+            <span class="module-icon">📡</span>
+          </div>
+          <h3 class="module-title">Monitoramento</h3>
+          <p class="module-desc">Acompanhamento em tempo real de toda a infraestrutura para identificar falhas antes que impactem a operação.</p>
+          <div class="module-footer">
+            <div class="module-status"><span class="status-dot"></span> ATIVO</div>
+          </div>
+        </div>
+
+        <!-- MODULE 9 -->
+        <div class="hud-module">
+          <div class="module-header">
+            <span class="module-id">MOD_09</span>
+            <span class="module-icon">🔐</span>
+          </div>
+          <h3 class="module-title">Gestão de Dados</h3>
+          <p class="module-desc">Implementação de políticas e controles para garantir a segurança, integridade e organização das informações.</p>
+          <div class="module-footer">
+            <div class="module-status"><span class="status-dot"></span> ATIVO</div>
+          </div>
+        </div>
+
+        <!-- MODULE 10 -->
+        <div class="hud-module">
+          <div class="module-header">
+            <span class="module-id">MOD_10</span>
+            <span class="module-icon">📊</span>
+          </div>
+          <h3 class="module-title">Consultoria TI</h3>
+          <p class="module-desc">Análise estratégica com foco em evolução, redução de riscos e alinhamento da TI aos objetivos do negócio.</p>
+          <div class="module-footer">
+            <div class="module-status"><span class="status-dot"></span> ATIVO</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="clearance" class="clearance-section">
+    <div class="container">
+      <div class="section-header reveal" style="text-align: center; margin-bottom: 80px;">
+        <h2 class="massive-title reveal-up" style="font-size: 2.5rem; letter-spacing: 4px; color: var(--color-neon-green);">PLANOS</h2>
+        <div class="header-line"></div>
+      </div>
+
+      <div class="clearance-grid">
+
+        <!-- TIER 1 -->
+        <div class="tier-box">
+          <div class="shimmer-layer"></div>
+          <div class="tier-header">
+            <span class="lvl">NÍVEL_01</span>
+            <span class="name">ESCUDO ESSENCIAL</span>
+          </div>
+          <div class="tier-price">R$ 697<span class="p-sub">/MÊS</span></div>
+          <div class="tier-specs">
+            <div class="spec-line"><span class="chk">[+]</span> MONITORAMENTO 8H (HORÁRIO COMERCIAL)</div>
+            <div class="spec-line"><span class="chk">[+]</span> SUPORTE REMOTO ILIMITADO</div>
+            <div class="spec-line"><span class="chk">[+]</span> BACKUP AUTOMATIZADO</div>
+            <div class="spec-line"><span class="chk">[+]</span> GESTÃO DE ATÉ 10 DISPOSITIVOS</div>
+            <div class="spec-line off"><span class="chk">[-]</span> CIBERSEGURANÇA AVANÇADA</div>
+            <div class="spec-line off"><span class="chk">[-]</span> FIREWALL GERENCIADO</div>
+          </div>
+          <a href="contato.html" class="btn-brutal block">
+            <span class="btn-bracket">[</span> <span class="btn-text">SOLICITAR_NIVEL_01</span> <span
+              class="btn-bracket">]</span>
+          </a>
+        </div>
+
+        <!-- TIER 2 -->
+        <div class="tier-box highlight-tier">
+          <div class="shimmer-layer"></div>
+          <div class="tier-badge">RECOMENDADO</div>
+          <div class="tier-header">
+            <span class="lvl">NÍVEL_02</span>
+            <span class="name">BLINDAGEM PRO</span>
+          </div>
+          <div class="tier-price">R$ 1.897<span class="p-sub">/MÊS</span></div>
+          <div class="tier-specs">
+            <div class="spec-line"><span class="chk">[+]</span> MONITORAMENTO CRÍTICO 24/7</div>
+            <div class="spec-line"><span class="chk">[+]</span> SUPORTE PRIORITÁRIO (N1/N2/N3)</div>
+            <div class="spec-line"><span class="chk">[+]</span> BACKUP COMPLETO + TESTES MENSAIS</div>
+            <div class="spec-line"><span class="chk">[+]</span> CIBERSEGURANÇA ATIVA (EDR)</div>
+            <div class="spec-line"><span class="chk">[+]</span> FIREWALL GERENCIADO INTEGRADO</div>
+            <div class="spec-line"><span class="chk">[+]</span> GESTÃO DE ATÉ 30 DISPOSITIVOS</div>
+          </div>
+          <a href="contato.html" class="btn-brutal block primary">
+            <span class="btn-bracket">[</span> <span class="btn-text">SOLICITAR_NIVEL_02</span> <span
+              class="btn-bracket">]</span>
+          </a>
+        </div>
+
+        <!-- TIER 3 -->
+        <div class="tier-box">
+          <div class="shimmer-layer"></div>
+          <div class="tier-header">
+            <span class="lvl">NÍVEL_03</span>
+            <span class="name">ELITE ENTERPRISE</span>
+          </div>
+          <div class="tier-price">R$ 3.997<span class="p-sub">/MÊS</span></div>
+          <div class="tier-specs">
+            <div class="spec-line"><span class="chk">[+]</span> MONITORAMENTO DEDICADO E EXECUTIVO</div>
+            <div class="spec-line"><span class="chk">[+]</span> SUPORTE VIP COM SLA DE 15 MINUTOS</div>
+            <div class="spec-line"><span class="chk">[+]</span> BACKUP ILIMITADO + DISASTER RECOVERY</div>
+            <div class="spec-line"><span class="chk">[+]</span> CIBERSEGURANÇA ENTERPRISE (ZERO TRUST)</div>
+            <div class="spec-line"><span class="chk">[+]</span> FIREWALL PROFUNDO + IDS/IPS ATIVO</div>
+            <div class="spec-line"><span class="chk">[+]</span> DISPOSITIVOS ILIMITADOS</div>
+          </div>
+          <a href="contato.html" class="btn-brutal block">
+            <span class="btn-bracket">[</span> <span class="btn-text">SOLICITAR_NIVEL_03</span> <span
+              class="btn-bracket">]</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="sys-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="sys-brand">
+          <img src="img/logo.png" alt="WM Computing Logo" class="brand-logo" />
+          <span class="brand-text">WM_COMPUTING</span>
+        </div>
+        <div class="f-info">© 2011-2026 WM COMPUTING <span id="sys-status-monitor"
+            style="color: var(--color-neon-green); margin-left: 10px; font-family: var(--font-mono); font-size: 0.7rem;">[
+            STATUS: CALCULANDO... ]</span></div>
+        <div class="f-links">
+          <a href="contato.html">> INICIAR COMUNICAÇÃO</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/5555984196157" target="_blank" class="float-wa" title="Iniciar Comunicação via WhatsApp">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M20.52 3.449A11.96 11.96 0 0012 0C5.385 0 0 5.385 0 12c0 2.115.553 4.14 1.605 5.945L0 24l6.195-1.59A11.956 11.956 0 0012 24c6.615 0 12-5.385 12-12 0-3.195-1.245-6.21-3.48-8.551zM12 21.975c-1.785 0-3.525-.48-5.055-1.38l-.36-.21-3.75.99.99-3.66-.24-.375A9.914 9.914 0 012.025 12c0-5.505 4.47-9.975 9.975-9.975S21.975 6.495 21.975 12 17.505 21.975 12 21.975zm5.46-7.47c-.3-.15-1.77-.87-2.04-.975-.27-.105-.465-.15-.66.15s-.765.975-.945 1.17c-.18.195-.36.225-.66.075-.3-.15-1.26-.465-2.4-1.485-.885-.795-1.485-1.77-1.665-2.07-.18-.3-.015-.465.135-.615.135-.135.3-.3.45-.465.15-.15.21-.27.3-.45.105-.195.045-.36-.03-.45-.075-.105-.66-1.59-.9-2.175-.24-.585-.48-.51-.66-.51-.18 0-.39 0-.6 0s-.555.075-.84.39C6.465 8.16 5.61 8.97 5.61 10.605c0 1.635.87 3.21 1 3.39.135.18 2.31 3.525 5.61 4.95 2.16.93 2.925.99 3.93.84 1.11-.165 3.36-1.38 3.84-2.715.48-1.335.48-2.475.33-2.715-.135-.225-.51-.36-.81-.51z"
+        fill="currentColor" />
+    </svg>
+  </a>
+
+  <!-- MODAL OVERLAY -->
+  <div id="modal-overlay">
+    <div class="hud-modal-container">
+      <div class="modal-hud-header">
+        <div class="modal-hud-title-wrap">
+          <div class="modal-hud-icon" id="modal-icon">⌬</div>
+          <div class="modal-hud-title" id="modal-title">MOD_ANALYSIS</div>
+        </div>
+        <button class="btn-modal-close" onclick="closeModal()">[ × ] FECHAR</button>
+      </div>
+      <div class="modal-hud-body" id="modal-content">
+        <!-- Injected via JS -->
+      </div>
+      <div class="modal-footer">
+        <a href="contato.html" class="btn-brutal primary" style="padding: 12px 24px;">
+          <span class="btn-bracket">[</span>
+          <span class="btn-text">INICIAR_CONSULTORIA</span>
+          <span class="btn-bracket">]</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/modals.js?v=21"></script>
+  <script src="js/main.js?v=21"></script>
+  <script src="js/canvas.js?v=21"></script>
+
+</body>
+
+</html>

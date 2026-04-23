@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WM COMPUTING // INIT_CONTACT</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Syncopate:wght@400;700&family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=21" />
+  <style>
+    .contact-section {
+      padding-top: calc(var(--nav-height) + 80px);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      width: 100%;
+    }
+    .contact-form {
+      background: var(--bg-panel);
+      padding: 40px;
+      border: var(--border-thin);
+    }
+    .form-group {
+      margin-bottom: 24px;
+    }
+    .form-label {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--color-neon-blue);
+      margin-bottom: 8px;
+    }
+    .form-input {
+      width: 100%;
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 16px;
+      color: var(--color-text-main);
+      font-family: var(--font-mono);
+      outline: none;
+      transition: 0.3s;
+    }
+    .form-input:focus {
+      border-color: var(--color-neon-green);
+      box-shadow: 0 0 15px rgba(0,255,65,0.1);
+    }
+    textarea.form-input {
+      resize: vertical;
+      min-height: 120px;
+    }
+    .contact-info {
+      font-family: var(--font-mono);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .info-block {
+      margin-bottom: 32px;
+    }
+    .info-title {
+      font-size: 0.85rem;
+      color: var(--color-text-dim);
+      margin-bottom: 8px;
+    }
+    .info-data {
+      font-size: 1.25rem;
+      color: var(--color-text-main);
+      font-weight: 700;
+    }
+    @media (max-width: 768px) {
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NOISE OVERLAY FOR TEXTURE -->
+  <div class="noise-overlay"></div>
+
+  <!-- NAVIGATION -->
+  <nav class="sys-nav">
+    <div class="nav-container">
+      <a href="index.html" class="sys-brand">
+        <img src="img/logo.png" alt="WM Computing Logo" class="brand-logo" />
+        <span class="brand-text decipher" data-text="WM_COMPUTING">WM_COMPUTING</span>
+      </a>
+      <div class="sys-links">
+        <a href="index.html#core" class="nav-link">[ 01. INÍCIO ]</a>
+        <a href="index.html#datagrid" class="nav-link">[ 02. SOLUÇÕES ]</a>
+        <a href="index.html#clearance" class="nav-link">[ 03. PLANOS ]</a>
+        <a href="contato.html" class="nav-link highlight">[ CONTATO ]</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="contact-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="sys-title">> ESTABELECER CONEXÃO // CENTRAL DE COMANDO</h2>
+        <div class="header-line"></div>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-form">
+          <form id="contactForm">
+            <div class="form-group">
+              <label class="form-label" for="nome">> NOME COMPLETO / EMPRESA</label>
+              <input type="text" id="nome" name="nome" class="form-input" required placeholder="Ex: João Silva / TechCorp">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">> E-MAIL CORPORATIVO</label>
+              <input type="email" id="email" name="email" class="form-input" required placeholder="exemplo@suaempresa.com.br">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="telefone">> WHATSAPP PARA CONTATO</label>
+              <input type="tel" id="telefone" name="telefone" class="form-input" required placeholder="(00) 0.0000-0000">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="mensagem">> COMO PODEMOS AJUDAR?</label>
+              <textarea id="mensagem" name="mensagem" class="form-input" required placeholder="Descreva brevemente sua necessidade de infraestrutura ou suporte..."></textarea>
+            </div>
+            <button type="submit" class="btn-brutal block primary" style="background: transparent;">
+              <span class="btn-bracket">[</span> <span class="btn-text">INICIAR_DIAGNÓSTICO_GRATUITO</span> <span class="btn-bracket">]</span>
+            </button>
+          </form>
+        </div>
+
+        <div class="contact-info">
+          <div class="info-block">
+            <div class="info-title">> STATUS DE RESPOSTA (SLA)</div>
+            <div class="info-data" style="color: var(--color-neon-green);">GARANTIDO < 15 MINUTOS</div>
+          </div>
+          <div class="info-block">
+            <div class="info-title">> NÓ CENTRAL // HQ</div>
+            <div class="info-data">R. Santana, 3397 - Centro<br>Uruguaiana - RS<br>97502-350, Brazil</div>
+          </div>
+          <div class="info-block">
+            <div class="info-title">> CONTATOS DIRETOS</div>
+            <div class="info-data">comercial@wmcomputing.com.br<br>+55 55 98419-6157</div>
+          </div>
+          <div class="info-block">
+            <div class="info-title">> PROTOCOLOS DE SUPORTE</div>
+            <div class="info-data">Monitoramento 24/7/365 Ativo.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="sys-footer" style="margin-top: 60px;">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="sys-brand">
+          <img src="img/logo.png" alt="WM Computing Logo" class="brand-logo" />
+          <span class="brand-text">WM_COMPUTING</span>
+        </div>
+        <div class="f-info">© 2011-2026 WM COMPUTING. TODOS OS SISTEMAS NOMINAIS.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/5555984196157" target="_blank" class="float-wa" title="Iniciar Comunicação via WhatsApp">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20.52 3.449A11.96 11.96 0 0012 0C5.385 0 0 5.385 0 12c0 2.115.553 4.14 1.605 5.945L0 24l6.195-1.59A11.956 11.956 0 0012 24c6.615 0 12-5.385 12-12 0-3.195-1.245-6.21-3.48-8.551zM12 21.975c-1.785 0-3.525-.48-5.055-1.38l-.36-.21-3.75.99.99-3.66-.24-.375A9.914 9.914 0 012.025 12c0-5.505 4.47-9.975 9.975-9.975S21.975 6.495 21.975 12 17.505 21.975 12 21.975zm5.46-7.47c-.3-.15-1.77-.87-2.04-.975-.27-.105-.465-.15-.66.15s-.765.975-.945 1.17c-.18.195-.36.225-.66.075-.3-.15-1.26-.465-2.4-1.485-.885-.795-1.485-1.77-1.665-2.07-.18-.3-.015-.465.135-.615.135-.135.3-.3.45-.465.15-.15.21-.27.3-.45.105-.195.045-.36-.03-.45-.075-.105-.66-1.59-.9-2.175-.24-.585-.48-.51-.66-.51-.18 0-.39 0-.6 0s-.555.075-.84.39C6.465 8.16 5.61 8.97 5.61 10.605c0 1.635.87 3.21 1 3.39.135.18 2.31 3.525 5.61 4.95 2.16.93 2.925.99 3.93.84 1.11-.165 3.36-1.38 3.84-2.715.48-1.335.48-2.475.33-2.715-.135-.225-.51-.36-.81-.51z" fill="currentColor"/>
+    </svg>
+  </a>
+
+  <script src="js/main.js?v=21"></script>
+  <script src="js/canvas.js?v=21"></script>
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const nome = document.getElementById('nome').value;
+      const email = document.getElementById('email').value;
+      const telefone = document.getElementById('telefone').value;
+      const mensagem = document.getElementById('mensagem').value;
+      
+      const subject = `Novo Requerimento do Site - ${nome}`;
+      const body = `> IDENTIFICAÇÃO: ${nome}\n> ENDEREÇO DE REDE: ${email}\n> CANAL DE VOZ: ${telefone}\n\n> PACOTE DE DADOS:\n${mensagem}`;
+      
+      // Cria a URL mailto com os dados preenchidos
+      const mailtoUrl = `mailto:comercial@wmcomputing.com.br?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      
+      // Abre o programa de e-mail padrão do usuário
+      window.location.href = mailtoUrl;
+      
+      // Feedback na tela
+      const btnText = this.querySelector('.btn-text');
+      const originalText = btnText.innerText;
+      btnText.innerText = "ABRINDO_EMAIL";
+      btnText.style.color = "var(--color-neon-green)";
+      
+      setTimeout(() => {
+        btnText.innerText = originalText;
+        btnText.style.color = "";
+        this.reset();
+      }, 3000);
+    });
+  </script>
+</body>
+</html>

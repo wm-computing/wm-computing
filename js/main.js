@@ -152,4 +152,32 @@ document.addEventListener('DOMContentLoaded', () => {
     updateMonitor();
   }
 
+  // 7. MOBILE MENU LOGIC
+  const navToggle = document.getElementById('nav-toggle');
+  const sysLinks = document.getElementById('sys-links');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  if (navToggle && sysLinks) {
+    navToggle.addEventListener('click', () => {
+      sysLinks.classList.toggle('is-active');
+      navToggle.classList.toggle('is-active');
+    });
+
+    // Close menu when clicking a link
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        sysLinks.classList.remove('is-active');
+        navToggle.classList.remove('is-active');
+      });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!navToggle.contains(e.target) && !sysLinks.contains(e.target)) {
+        sysLinks.classList.remove('is-active');
+        navToggle.classList.remove('is-active');
+      }
+    });
+  }
+
 });
